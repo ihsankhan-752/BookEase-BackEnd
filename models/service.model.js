@@ -29,6 +29,11 @@ const serviceSchema = new mongoose.Schema(
       required: true,
     },
 
+    image: {
+      public_id: { type: String, default: null },
+      url: { type: String, default: null },
+    },
+
     isActive: {
       type: Boolean,
       default: true,

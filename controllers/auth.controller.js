@@ -85,7 +85,7 @@ export const logout = asyncHanler(async (req, res, next) => {
 });
 
 export const getMe = asyncHanler(async (req, res, next) => {
-  const userId = req.user._id;
+  const userId = req.user.id;
   const user = await User.findById(userId);
 
   if (!user) {
